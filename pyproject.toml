@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "datalake"
+version = "0.1.0"
+description = "Data Lake implementation with PySpark and Delta Lake"
+authors = ["elevy30"]
+#create env in local folder
+
+[virtualenvs]
+in-project = true
+
+[tool.poetry.dependencies]
+python = "3.10.11"  # Python 3.9-3.11 for best compatibility
+pyspark = "3.4.1"  # Stable version compatible with Delta Lake 2.x
+delta-spark = "2.4.0"  # Compatible with PySpark 3.4.x
+pandas = "^2.2.3"
+findspark = "^1.4.2"
+requests = "^2.26.0"
+pytest = "^7.0"
+pytest-mock = "^3.7.0"
+pytest-spark = "^0.6.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+black = "^23.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
